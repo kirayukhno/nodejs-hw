@@ -14,6 +14,8 @@ export async function saveFileToCloudinary(buffer) {
       {
         folder: 'avatars',
         resource_type: 'image',
+        use_filename: false,
+        unique_filename: true,
       },
       (err, result) => (err ? reject(err) : resolve(result)),
     );
